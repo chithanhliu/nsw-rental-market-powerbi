@@ -4,9 +4,19 @@
 
 This project analyses **672,365 rental bond lodgements** in New South Wales, Australia (Aug 2024 – Aug 2026) with **SQL (DuckDB)** and presents the answers in a **7-page interactive Power BI dashboard**.
 
+## TL;DR
+
+> **Problem:** a property consultancy needs to tell clients whether an area is expensive, and which rent movements are real.
+>
+> **Finding:** median rent of new tenancies rose **4.35%** while new lodgements fell **3.6%**. Comparing an area with the wrong benchmark is the main risk: houses look cheaper than flats across NSW but cost more inside each region (**Simpson's paradox**), and a state-wide benchmark reverses the "above or below market" answer for **14–30%** of postcode segments.
+>
+> **Recommendation:** always benchmark an area against its own region and segment; treat the 10 flagged movements as a research shortlist (7 stable signals to verify, 3 data checks first).
+>
+> **How:** DuckDB SQL over 672,365 lodgements → 7-page Power BI dashboard · 14/14 SQL checks · 161/161 DAX–SQL matches · medians cross-checked against official NSW rent tables.
+
 ![Executive Overview](screenshots/01_executive_overview.png)
 
-**[⬇ Download the dashboard (.pbix, 12 MB)](NSW_Rental_Market_Dashboard.pbix)** · [Business questions](docs/Business_Questions.md) · [Findings](docs/Findings_and_Recommendations.md) · [SQL](sql/) · [Methodology](docs/Methodology.md)
+📄 **[View the dashboard as a PDF](docs/Dashboard_Preview.pdf)** (no Power BI needed) · **[⬇ Download the dashboard (.pbix, 12 MB)](NSW_Rental_Market_Dashboard.pbix)** · [Business questions](docs/Business_Questions.md) · [Findings](docs/Findings_and_Recommendations.md) · [SQL](sql/) · [Methodology](docs/Methodology.md)
 
 > **Language note:** the Power BI dashboard is written in **Vietnamese** (page titles, insights and notes), because it was built for the Vietnamese job market; KPI labels are in English. This README and all documentation are in **English** and explain every page — each screenshot below has an English caption.
 
