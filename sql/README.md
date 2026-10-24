@@ -1,6 +1,6 @@
 # SQL
 
-Selected SQL from the project, written for **DuckDB**. The files are published **unchanged** (byte-for-byte) from the analysis project, so file names, numbering and comments are those of the original pipeline. Steps 02–04, 08 and 10–11 (raw-file loading, dimensions, mix tables, Power BI export) belong to the private pipeline and are not included.
+Selected SQL from the project, written in the DuckDB SQL dialect. The files are published **unchanged** (byte-for-byte) from the analysis project, so file names, numbering and comments are those of the original pipeline. Steps 02–04, 08 and 10–11 (raw-file loading, dimensions, mix tables, Power BI export) belong to the private pipeline and are not included.
 
 > **Read and discuss, not run.** These scripts need the project's DuckDB database, which is built from the raw files by a private ingestion step and is not distributed. See [Dependencies](#dependencies-why-the-scripts-do-not-run-on-their-own) below.
 

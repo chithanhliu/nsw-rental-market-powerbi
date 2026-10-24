@@ -2,7 +2,7 @@
 
 **How can a property consultancy compare rents between areas fairly, spot unusual movements, and know when a number is reliable enough to advise a client?**
 
-This project analyses **672,365 rental bond lodgements** in New South Wales, Australia (Aug 2024 – Aug 2026) with **SQL (DuckDB)** and presents the answers in a **7-page interactive Power BI dashboard**.
+This project analyses **672,365 rental bond lodgements** in New South Wales, Australia (Aug 2024 – Aug 2026) with **SQL** and presents the answers in a **7-page interactive Power BI dashboard**.
 
 ## TL;DR
 
@@ -12,7 +12,7 @@ This project analyses **672,365 rental bond lodgements** in New South Wales, Aus
 >
 > **Recommendation:** always benchmark an area against its own region and segment; treat the 10 flagged movements as a research shortlist (7 stable signals to verify, 3 data checks first).
 >
-> **How:** DuckDB SQL over 672,365 lodgements → 7-page Power BI dashboard · 14/14 SQL checks · 161/161 DAX–SQL matches · medians cross-checked against official NSW rent tables.
+> **How:** SQL over 672,365 lodgements → 7-page Power BI dashboard · 14/14 SQL checks · 161/161 DAX–SQL matches · medians cross-checked against official NSW rent tables.
 
 ![Executive Overview](screenshots/01_executive_overview.png)
 
@@ -76,7 +76,7 @@ Every statement in the project is labelled **Observed** or **Hypothesis**; no ro
 
 ## SQL highlights — five queries, five business answers
 
-The SQL in [`sql/`](sql/) is published unchanged from the project (DuckDB). These five queries carry the main business story; the other files are supplementary technical documentation (staging, regional marts, validation) described in the [SQL guide](sql/README.md).
+The SQL in [`sql/`](sql/) is published unchanged from the project. These five queries carry the main business story; the other files are supplementary technical documentation (staging, regional marts, validation) described in the [SQL guide](sql/README.md).
 
 **1 · Is a house cheaper than a flat? — Simpson's paradox** ([bq2_market_structure.sql](sql/business_questions/bq2_market_structure.sql), `bq2_region_type`)
 ```sql
@@ -150,7 +150,7 @@ New bonds only (not supply, vacancy or all current rents) · no property or lodg
 ├── NOTICE.md                          data sources, attribution and licensing
 ├── NSW_Rental_Market_Dashboard.pbix   Power BI dashboard (7 pages)
 ├── screenshots/                       one image per page
-├── sql/                               selected DuckDB SQL + guide
+├── sql/                               selected SQL scripts + guide
 └── docs/
     ├── Business_Questions.md          problem, users, requirements, BQ → page map
     ├── KPI_Dictionary.md              every KPI with formula, grain and caveats
@@ -159,7 +159,7 @@ New bonds only (not supply, vacancy or all current rents) · no property or lodg
     └── Limitations.md
 ```
 
-**Tools:** SQL (DuckDB) · Power BI Desktop (Power Query, DAX, star schema) · Python was used privately for data ingestion and automated tests and is not part of this repository.
+**Tools:** SQL · Power BI Desktop (Power Query, DAX, star schema) · Python was used privately for data ingestion and automated tests and is not part of this repository. The queries are written in the DuckDB SQL dialect (details in the [SQL guide](sql/README.md)).
 
 ## Data sources and licence
 
